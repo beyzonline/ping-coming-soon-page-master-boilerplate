@@ -1,20 +1,43 @@
-import React, { useMemo } from 'react';
-import { useCounter } from '@/hooks/useCounter';
+import React from 'react';
+import { Col, Row } from "antd";
 
-const Main = () => {
-  const { count, increment } = useCounter();
+import FormControl from '@/component/form-control/FormControl';
+import Logo from '@/component/logo/Logo';
+import Dashboard from '@/component/dashboard/Dashboard';
+import Footer from '@/component/footer/Footer';
+import Header from '@/component/header/Header';
 
-  const env: 'development' | 'production' = useMemo(() => {
-    return import.meta.env.VITE_TEST || process.env.NODE_ENV === 'test' ? 'development' : 'production';
-  }, []);
+
+
+const Main = () => { 
 
   return (
     <>
-      <h2 className="test">Hello Vite + React!</h2>
-      <p className="env">{env}</p>
-      <button type="button" onClick={increment}>
-        count is: {count}
-      </button>
+      <Row justify="center" style={{ marginTop: 50, marginBottom: 30}}>
+        <Col>
+          <Logo/>
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col>
+          <Header/>
+        </Col>
+      </Row>
+      <Row justify="center"  style={{ marginTop: 20, marginBottom: 60}}>
+        <Col>
+          <FormControl />
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col>
+          <Dashboard/>
+        </Col>
+      </Row>
+      <Row justify="center">
+        <Col>
+          <Footer/>
+        </Col>
+      </Row>
     </>
   );
 };

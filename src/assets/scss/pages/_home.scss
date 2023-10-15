@@ -1,0 +1,46 @@
+$primary: hsl(223, 87%, 63%);
+
+$secondaryBlue: hsl(223, 100%, 88%);
+$secondaryRed: hsl(354, 100%, 66%);
+
+$neutralGray: hsl(0, 0%, 59%);
+$neutralBlue: hsl(209, 33%, 12%);
+
+@font-face {
+  font-family: "Libre Franklin";
+  src: url(https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+}
+
+.ant-input{
+  border-radius: 30px;
+  height: 50px;
+  width: 25vw;
+}
+
+.ant-btn-primary{
+  background: $primary;
+  border-radius: 30px;
+  padding: 0px 50px;
+  margin: 0;
+  height: 50px;
+  line-height: 30px;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+
+.ant-typography{
+  color: $neutralGray;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.ant-typography:last-child{
+  color: $neutralGray;
+}
+
+.anticon{
+  color: $primary;
+  padding: 8px;
+  margin: 3px;
+  border: 1px solid $secondaryBlue;
+  border-radius: 15px;
+}
